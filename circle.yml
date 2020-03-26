@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Install dependencies
           command: npm ci
-      - run: npm run cy:verify
+      - run: npx cypress run
       # save npm dependencies and Cypress binary for future runs
       - save_cache:
           key: cache-{{ checksum "package.json" }}
@@ -26,6 +26,10 @@ jobs:
           command: npm run start:ci
           background: true
       - run: npm run e2e:record
+
+      # upload test results
+      - store_test_results:
+          path: /screenshots
 
 workflows:
   version: 2
