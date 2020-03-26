@@ -15,21 +15,10 @@ jobs:
           name: Install dependencies
           command: npm ci
       - run: npx cypress run
-      # save npm dependencies and Cypress binary for future runs
-      - save_cache:
-          key: cache-{{ checksum "package.json" }}
-          paths:
-            - ~/.npm
-            - ~/.cache
-      # start server before starting tests
-      - run:
-          command: npm run start:ci
-          background: true
-      - run: npm run e2e:record
 
       # upload test results
       - store_test_results:
-          path: /screenshots
+          path: /root/project/cypress/
 
 workflows:
   version: 2
