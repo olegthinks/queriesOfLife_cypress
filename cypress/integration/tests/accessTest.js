@@ -7,7 +7,7 @@ context('Page Check', function () {
     })
 
     it('Get Title', () => {
-        cy.title().should('eq', 'RRR Queries of Life')
+        cy.title().should('eq', 'Queries of Life')
     })
 
 })
