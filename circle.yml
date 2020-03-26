@@ -14,11 +14,15 @@ jobs:
       - run:
           name: Install dependencies
           command: npm ci
-      - run: npx cypress run
+      - run: 
+          name: Execute tests
+          command: npx cypress run
 
       # upload test results
       - store_artifacts:
-          path: /root/project/cypress/
+          path: /root/project/cypress/videos
+      - store_artifacts:
+          path: /root/project/cypress/screenshots
 
 workflows:
   version: 2
