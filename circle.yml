@@ -14,12 +14,9 @@ jobs:
       - run:
           name: Install dependencies
           command: npm ci
-      - run: npx cypress run --reporter junit --reporter-options "mochaFile=results/results.xml"
+      - run: npx cypress run
 
       # upload test results
-      - store_test_results:
-          path: /root/project/cypress/test-results.xml
-
       - store_artifacts:
           path: /root/project/cypress/
 
