@@ -1,6 +1,7 @@
 {
 	"scripts": {
-		"tests": "npx cypress run"
+		"tests": "npx cypress run",
+		"open": "npx cypress open"
 	},
 	"repository": {
 		"type": "git",
