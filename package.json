@@ -8,6 +8,6 @@
 		"url": "git+https://github.com/olegthinks/queriesOfLife_cypress.git"
 	  },
 	"devDependencies": {
-		"cypress": "^4.2.0"
+		"cypress": "^6.6.0"
 	}
 }
