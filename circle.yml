@@ -3,6 +3,8 @@ orbs:
   cypress: cypress-io/cypress@1
 jobs:
   Run Cypress Tests:
+    docker:
+      - image: cypress-io/cypress@1
     steps:
       - checkout
       # restore folders with npm dependencies and Cypress binary
