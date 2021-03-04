@@ -1,5 +1,7 @@
 {
     "watchForFileChanges": true,
     "chromeWebSecurity": false,
-    "failOnStatusCode": false
+    "failOnStatusCode": false,
+    "pageLoadTimeout": 120000,
+    "defaultCommandTimeout": 30000
 }
