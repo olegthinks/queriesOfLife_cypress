@@ -7,10 +7,14 @@ orbs:
 workflows:
   build:
     jobs:
+      e2e:
       # "cypress" is the name of the imported orb
       # "run" is the name of the job defined in Cypress orb
-      - cypress/run
+        - cypress/run
   schedule-workflow:
     triggers:
       - schedule: 
           cron: "* * * * *"
+      jobs:
+        e2e
+
