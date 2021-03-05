@@ -9,12 +9,11 @@ jobs:
     - cypress/run
 workflows:
   version: 2
-  e2e: 
-    build:
-      jobs:
+  build:
+    jobs:
       # "cypress" is the name of the imported orb
       # "run" is the name of the job defined in Cypress orb
-        - cypress/run
+      e2e
     nightly:
       triggers:
         - schedule:
