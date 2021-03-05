@@ -5,13 +5,15 @@ orbs:
   # or the latest version 1.x.x using "@1" syntax
   cypress: cypress-io/cypress@1
 workflows:
-  build:
-    jobs:
-      e2e:
+  e2e: 
+    build:
+      jobs:
       # "cypress" is the name of the imported orb
       # "run" is the name of the job defined in Cypress orb
         - cypress/run
   schedule-workflow:
     triggers:
       - schedule: 
-          cron: "* * * * *"
+        cron: "* * * * *"
+      jobs:
+        e2e
