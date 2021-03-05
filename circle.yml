@@ -12,4 +12,5 @@ workflows:
       - cypress/run
   schedule-workflow:
     triggers:
-      - schedule: "* * * * *"
+      - schedule: 
+        cron: "* * * * *"
