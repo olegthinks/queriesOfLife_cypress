@@ -15,6 +15,4 @@ workflows:
                 only:
                   - master
                   - beta
-    jobs:
-       - cypress/run
       
