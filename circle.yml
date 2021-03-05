@@ -13,4 +13,4 @@ workflows:
   schedule-workflow:
     triggers:
       - schedule: 
-        cron: "* * * * *"
+          cron: "* * * * *"
