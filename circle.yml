@@ -22,6 +22,5 @@ workflows:
                   - master
                   - beta
     jobs:
-       - coverage
-      
+       - e2e
       
