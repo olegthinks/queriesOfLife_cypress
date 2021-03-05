@@ -4,6 +4,9 @@ orbs:
   # import Cypress orb by specifying an exact version x.y.z
   # or the latest version 1.x.x using "@1" syntax
   cypress: cypress-io/cypress@1
+jobs:
+  e2e:
+    - cypress/run
 workflows:
   version: 2
   e2e: 
@@ -15,7 +18,7 @@ workflows:
     nightly:
       triggers:
         - schedule:
-            cron: "0 0 * * *"
+            cron: "* * * * *"
             filters:
               branches:
                 only:
