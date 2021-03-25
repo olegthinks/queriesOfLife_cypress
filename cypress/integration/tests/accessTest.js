@@ -2,7 +2,7 @@
 
 context('Page Check', function () {
     it('Zillow', () => {
-        cy.visit('https://www.zillow.com/homedetails/3109-Golden-Valley-Rd-Golden-Valley-MN-55422/1850402_zpid/'), { force: true,  failOnStatusCode: false}
+        cy.visit('https://www.zillow.com/homes/1850402_zpid/'), { force: true,  failOnStatusCode: false}
         //cy.title().should('contains', '3109')
     })
     it('Redfin', () => {
