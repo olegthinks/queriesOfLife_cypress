@@ -20,8 +20,33 @@ context('Page Check', function () {
         cy.visit('https://www.trulia.com/p/mn/golden-valley/3109-golden-valley-rd-golden-valley-mn-55422--2055714019')
         cy.title().should('contains', '3109')
     })
+    it('ColdwellBanker', () => {
+        cy.visit('https://www.coldwellbankerhomes.com/mn/golden-valley/3109-golden-valley-rd/pid_40440767/')
+        cy.title().should('contains', '3109')
+    })
+    it('Remax', () => {
+        cy.visit('https://www.remax.com/mn/golden-valley/home-details/3109-golden-valley-rd-golden-valley-mn-55422/8305836604225815481')
+        cy.title().should('contains', '3109')
+    })
+    it('Estately', () => {
+        cy.visit('https://www.estately.com/listings/info/3109-golden-valley-road--9')
+        cy.title().should('contains', '3109')
+    })
+    it('Weichert', () => {
+        cy.visit('https://northstar.weichert.com/96829767/')
+        cy.title().should('contains', '3109')
+    })
+    it('CR', () => {
+        cy.visit('https://www.counselorrealty.com/p/3109-Golden-Valley-Road-Golden-Valley-MN-55422/dmgid_145172478')
+        cy.title().should('contains', '3109')
+    })
+    it('Edina', () => {
+        cy.visit('https://www.edinarealty.com/homes-for-sale/3109-golden-valley-road-golden-valley-mn-55422-5729523')
+        cy.title().should('contains', '3109')
+    })
     it('Queries of Life', () => {
         cy.visit('https://queriesoflife.com/')
         cy.title().should('eq', 'Queries of Life')
     })
+   
 })
