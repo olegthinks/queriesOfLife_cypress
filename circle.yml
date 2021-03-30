@@ -11,7 +11,7 @@ workflows:
         - cypress/run
       triggers:
         - schedule:
-            cron: "* * * * *"
+            cron: "59 * * * *"
             filters:
               branches:
                 only:
